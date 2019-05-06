@@ -1,0 +1,350 @@
+﻿<Window x:Class="_1760327.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="650" MinWidth="800" Background="White" Height="700"
+        Loaded="Window_Loaded">
+    <Grid OpacityMask="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="240*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="375"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer  Grid.Row="2" Grid.Column="1" 
+                       VerticalScrollBarVisibility="Visible"
+                       CanContentScroll="True" Margin="4.8,5.2,4.6,5.4" >
+            <StackPanel Margin="0" >
+
+                <Button x:Name="startButton1" Height="40" Margin="5,5,10.2,5" BorderThickness="1" Click="StartButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="30" Height="30" Source="IconResources/press-play-button.png" />
+                        <TextBlock Text="Start Batch" FontSize="25" Margin="2,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <RadioButton GroupName="IsSkip" IsChecked="True" x:Name="skip1" HorizontalAlignment="Center" Margin="5" Checked="Skip_Checked" Content="Skip conflicts"/>
+                <RadioButton GroupName="IsSkip" x:Name="addSuffixes1" HorizontalAlignment="Center" Margin="141,0,141.2,0" Width="89" Checked="AddSuffixes_Checked" Content="Add suffixes"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="1" Margin="2,2.2,2.2,2.4" >
+
+            <WrapPanel Margin="10,5,5,5">
+                <TextBlock FontSize="20">
+                    Presets:
+                </TextBlock>
+                <ComboBox Margin="2" Name="presetComboBox" Width="225" SelectionChanged="PresetComboBox_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate >
+                            <WrapPanel>
+                                <TextBlock Text="{Binding Item.Name}"/>
+                                <TextBlock Text=": "/>
+                                <TextBlock Text="{Binding Item.Args.Details}"/>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Button Name="methodMenuOpenButton" Margin="3"  BorderThickness="0" Click="MethodMenuOpenButton_Click">
+                    <Image Source="/IconResources/open-folder.png" Height="20" Width="20"/>
+                </Button>
+                <Button Name="methodMenuSaveButton" Margin="3"  BorderThickness="0" Click="MethodMenuSaveButton_Click">
+                    <Image Source="/IconResources/save.png" Height="20" Width="20"/>
+                </Button>
+            </WrapPanel>
+            <Line
+                 X1="5" X2="365"
+                StrokeThickness="3" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Fill="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" />
+
+        </StackPanel>
+
+        <Grid Grid.Column="0" Grid.Row="1" Margin="0,0.2,0.2,3.8"  
+                   >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text=" Rename method list" FontSize="25" Grid.Row="0"
+                       Foreground="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" 
+                       Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"
+                       Margin="0,0,0,5">
+
+            </TextBlock>
+
+            <ToolBarTray Margin="0,0,0,0" Name="methodToolBarTray" IsLocked="True" Grid.Row="1">
+                <ToolBar >
+                    <Menu Name="methodMenu">
+                        <MenuItem Name="addMethodMenu" Margin="0,0,0,0">
+                            <MenuItem.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Height="20" Width="20" Source="/IconResources/add.png" />
+                                    <TextBlock Text="Add method" FontSize="20"  Margin="2,0,0,0"/>
+                                </StackPanel>
+                            </MenuItem.Header>
+
+                            <MenuItem.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderThickness="1" BorderBrush="Black" Margin="-30,-3,-30,-3">
+                                        <TextBlock Text="{Binding Name}" MouseLeftButtonDown="MenuMethod_MouseLeftButtonDown" HorizontalAlignment="Stretch" />
+                                    </Border>
+                                </DataTemplate>
+                            </MenuItem.ItemTemplate>
+                        </MenuItem>
+                    </Menu>
+                    <Button Name="clearMethodMenuButton" Click="ClearMethodMenuButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/IconResources/clear.png" Height="20" Width="20" />
+                            <TextBlock Margin="5,0,0,0" FontSize="20">Clear</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="methodMenuTopButton" Click="MethodMenuTopButton_Click">
+                        <Image Source="/IconResources/arrow-top.png" Height="20" Width="20"/>
+                    </Button>
+                    <Button Name="methodMenuUpButton" Click="MethodMenuUpButton_Click">
+                        <Image Source="/IconResources/arrow-up.png" Height="20" Width="20"/>
+                    </Button>
+                    <Button Name="methodMenuDownButton" Click="MethodMenuDownButton_Click">
+                        <Image Source="/IconResources/arrow-down.png" Height="20" Width="20"/>
+                    </Button>
+                    <Button Name="methodMenuBotButton" Click="MethodMenuBotButton_Click">
+                        <Image Source="/IconResources/arrow-bot.png" Height="20" Width="20"/>
+                    </Button>
+
+                </ToolBar>
+            </ToolBarTray>
+
+            <Line Grid.Row="2"
+                 X1="5" X2="370"
+                StrokeThickness="3" Stroke="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" Fill="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" />
+
+            <ListBox Name="methodListBox" Grid.Row="3"
+                     AllowDrop="True"
+                     Margin="5,0,5,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                     Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}" >
+
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Edit" Click="ContextMenuItem_Click"></MenuItem>
+                                </ContextMenu>
+                            </Grid.ContextMenu>
+                            <Expander BorderThickness="1" BorderBrush="Black">
+                                <Expander.Style>
+                                    <!--khi chon expender thi chon luon item listbox-->
+                                    <Style TargetType="{x:Type Expander}">
+                                        <Setter Property="IsHitTestVisible" Value="False" />
+                                        <Style.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, 
+                                                AncestorType={x:Type ListBoxItem}, AncestorLevel=1}}"
+                                                Value="True">
+                                                <Setter Property="IsHitTestVisible" Value="True" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Expander.Style>
+
+                                <Border BorderThickness="0,1,0,0" BorderBrush="Black" Margin="0,5,0,0">
+                                    <TextBlock  Text="{Binding Item.Args.Details}"  />
+                                </Border>
+                            </Expander>
+                            <WrapPanel Margin="30,0,0,0">
+                                <WrapPanel.Style>
+                                    <!--khi chon WrapPanel thi chon luon item listbox-->
+                                    <Style TargetType="{x:Type WrapPanel}">
+                                        <Setter Property="IsHitTestVisible" Value="False" />
+                                        <Style.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, 
+                                                AncestorType={x:Type ListBoxItem}, AncestorLevel=1}}"
+                                                Value="True">
+                                                <Setter Property="IsHitTestVisible" Value="True" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </WrapPanel.Style>
+                                <TextBlock FlowDirection="LeftToRight" Width="270"
+                                          Text="{Binding Item.Name}" FontSize="20"/>
+                                <CheckBox  FlowDirection="RightToLeft" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                                          Margin="5"
+                                          IsChecked="{Binding IsActive}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                                <Button BorderThickness="1" FlowDirection="RightToLeft" Margin="5" Click="DeleteMethod_Button">
+                                    <Image Source="/IconResources/delete.png" Height="15" Width="15" />
+                                </Button>
+                            </WrapPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+
+        <TabControl  Name="Tab" Margin="4.8,0.2,-0.4,3.8" SelectionChanged="Tab_SelectionChanged" Grid.Column="1" Grid.Row="1">
+            <TabItem Header="Files">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <ToolBarTray Margin="0,0,0,0" Name="fileToolBarTray" IsLocked="True" Grid.Row="0">
+                        <ToolBar Margin="0,0,0,0" >
+                            <Button Name="fileAddButton" Click="FileAddButton_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="20" Height="20" Source="/IconResources/add.png" />
+                                    <TextBlock Text="Add" FontSize="20" Margin="2,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Name="fileMenuTopButton" Click="FileMenuTopButton_Click">
+                                <Image Source="/IconResources/arrow-top.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="fileMenuUpButton" Click="FileMenuUpButton_Click">
+                                <Image Source="/IconResources/arrow-up.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="fileMenuDownButton" Click="FileMenuDownButton_Click">
+                                <Image Source="/IconResources/arrow-down.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="fileMenuBotButton" Click="FileMenuBotButton_Click">
+                                <Image Source="/IconResources/arrow-bot.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="fileDeleteButton" Click="FileDeleteButton_Click">
+                                <Image Source="/IconResources/delete.png" Height="20" Width="20" />
+                            </Button>
+                        </ToolBar>
+                    </ToolBarTray>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                                    CanContentScroll="True" Grid.Row="1">
+                        <ListView Name="filesListView" Margin="0,0,0,0" 
+                                Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="File name" Width="75">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Name}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="New file name" Width="80">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding NewName}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Extension" Width="60">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Extension}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Folder Content" Width="300">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding UpperPath}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Error">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Error}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Folders">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <ToolBarTray Margin="0,0,0,0" Name="folderToolBarTray" IsLocked="True" Grid.Row="0">
+                        <ToolBar >
+                            <Button Name="folderAddButton" Click="FolderAddButton_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Width="20" Height="20" Source="/IconResources/add.png" />
+                                    <TextBlock Text="Add" FontSize="20" Margin="2,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Name="folderMenuTopButton" Click="FolderMenuTopButton_Click">
+                                <Image Source="/IconResources/arrow-top.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="folderMenuUpButton" Click="FolderMenuUpButton_Click">
+                                <Image Source="/IconResources/arrow-up.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="folderMenuDownButton" Click="FolderMenuDownButton_Click">
+                                <Image Source="/IconResources/arrow-down.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="folderMenuBotButton" Click="FolderMenuBotButton_Click">
+                                <Image Source="/IconResources/arrow-bot.png" Height="20" Width="20"/>
+                            </Button>
+                            <Button Name="folderDeleteButton" Click="FolderDeleteButton_Click">
+                                <Image Source="/IconResources/delete.png" Height="20" Width="20" />
+                            </Button>
+                        </ToolBar>
+                    </ToolBarTray>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+                                    CanContentScroll="True" Grid.Row="1">
+                        <ListView Name="folderListView"  Margin="0,0,0,0"
+                                    Background="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionBrushKey}}"
+                                  >
+                            <ListView.View>
+                                <GridView ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                                    <GridViewColumn Header="Folder name" Width="75">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Name}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="New Folder name" Width="100">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding NewName}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+
+                                    <GridViewColumn Header="Folder Content" Width="300">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding UpperPath}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn Header="Error">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Error}"/>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+
+</Window>

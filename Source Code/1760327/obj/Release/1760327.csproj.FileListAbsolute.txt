@@ -1,0 +1,60 @@
+E:\User\Download\DOAN\DOAN1\1760327\bin\Release\1760327.exe.config
+E:\User\Download\DOAN\DOAN1\1760327\bin\Release\1760327.exe
+E:\User\Download\DOAN\DOAN1\1760327\bin\Release\1760327.pdb
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\MainWindow.baml
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\MainWindow.g.cs
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\MoveStringArgsDialog.g.cs
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\ReplaceArgsDialog.g.cs
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\NewCaseStringActionArgsDialog.g.cs
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\App.g.cs
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327_MarkupCompile.cache
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327_MarkupCompile.lref
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\MoveStringArgsDialog.baml
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\ReplaceArgsDialog.baml
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\NewCaseStringActionArgsDialog.baml
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327.g.resources
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\_1760327.Properties.Resources.resources
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327.csproj.GenerateResource.cache
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327.csproj.CoreCompileInputs.cache
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327.exe
+E:\User\Download\DOAN\DOAN1\1760327\obj\Release\1760327.pdb
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\bin\Release\1760327.exe.config
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\bin\Release\1760327.exe
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\bin\Release\1760327.pdb
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MainWindow.baml
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MainWindow.g.cs
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MoveStringArgsDialog.g.cs
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\ReplaceArgsDialog.g.cs
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\NewCaseStringActionArgsDialog.g.cs
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\App.g.cs
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327_MarkupCompile.cache
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327_MarkupCompile.lref
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MoveStringArgsDialog.baml
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\ReplaceArgsDialog.baml
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\NewCaseStringActionArgsDialog.baml
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.g.resources
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\_1760327.Properties.Resources.resources
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.csproj.GenerateResource.cache
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.csproj.CoreCompileInputs.cache
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.exe
+E:\User\Download\DOAN\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.pdb
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\bin\Release\1760327.exe.config
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\bin\Release\1760327.exe
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\bin\Release\1760327.pdb
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MainWindow.baml
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MainWindow.g.cs
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MoveStringArgsDialog.g.cs
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\ReplaceArgsDialog.g.cs
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\NewCaseStringActionArgsDialog.g.cs
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\App.g.cs
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327_MarkupCompile.cache
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327_MarkupCompile.lref
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\MoveStringArgsDialog.baml
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\ReplaceArgsDialog.baml
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\NewCaseStringActionArgsDialog.baml
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.g.resources
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\_1760327.Properties.Resources.resources
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.csproj.GenerateResource.cache
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.csproj.CoreCompileInputs.cache
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.exe
+E:\User\project\project_VS\1760327-MiniProject-Batch-Rename\Source Code\1760327\obj\Release\1760327.pdb

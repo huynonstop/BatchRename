@@ -1,0 +1,21 @@
+﻿<Window x:Class="_1760327.NewCaseStringArgsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1760327"
+        mc:Ignorable="d"
+       Title="Edit New Case" Height="171.067" Width="200.533" ResizeMode="NoResize">
+    <Grid>
+        <RadioButton Margin="40,7,43.4,109.6" GroupName="Case" Content="1.Upper Case" x:Name="radioBtn1" IsChecked="True"
+                     Checked="RadioBtn1_Checked"/>
+        <RadioButton GroupName="Case" Content="2.Lower Case" x:Name="radioBtn2" Margin="40,37,43.4,79.6"
+                     Checked="RadioBtn2_Checked"/>
+        <RadioButton GroupName="Case" Content="3.Proper Case"  x:Name="radioBtn3" Margin="40,67,43.4,54.6"
+                     Checked="RadioBtn3_Checked"/>
+        <Button x:Name="saveButton" Content="SAVE" IsDefault="True" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Click="SaveButton_Click"  Margin="10,92,108.4,16.6"/>
+        <Button x:Name="cancleButton" Content="CANCLE" IsCancel="True" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+            Margin="101,92,17.4,16.6"/>
+    </Grid>
+</Window>
